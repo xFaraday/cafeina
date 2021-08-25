@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+        algo-db:
+                build: .
+                ports: 
+                  -  "3306:3306"
+        defense:
+                build: .
+                ports:
+                  -  "80:80"
+        attack1:
+                build: .
+        attack2:
+                build: .
+        attack3:
+                build: .
+        attack4:
+                build: .
+        attack5:
+                build: .
