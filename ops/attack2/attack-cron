@@ -1,0 +1,2 @@
+* * * * * sh run_attack.sh ftp_login
+* * * * * sh run_attack.sh ssh_login
