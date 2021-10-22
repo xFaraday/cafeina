@@ -5,7 +5,7 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install git python3 python3-pip tcpdump sudo libpcap-dev -y
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install default-jdk
 RUN mkdir -p /home/CIC
-RUN git clone https://github.com/iPAS/TCPDUMP_and_CICFlowMeter.git
+RUN git clone https://github.com/xfaraday/TCPDUMP_and_CICFlowMeter.git
 RUN git clone https://github.com/xfaraday/cafeina
 
 EXPOSE 22
@@ -22,4 +22,4 @@ EXPOSE 3306
 #CMD["/run-services.sh"]
 
 WORKDIR /TCPDUMP_and_CICFlowMeter
-CMD sh try_me.sh
+#CMD sh try_me.sh
