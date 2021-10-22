@@ -7,8 +7,8 @@ RUN apt-get install git python python3 python3-pip cron nmap -y
 RUN git clone https://github.com/vulnersCom/nmap-vulners
 RUN git clone https://github.com/xfaraday/cafeina
 RUN nmap --script-updatedb
-RUN mv /cafeina/ops/attack3/infinite_scan.sh .
-RUN chmod 0744 /cafeina/ops/attack3/infinite_scan.sh
+#RUN mv /cafeina/ops/attack3/infinite_scan.sh .
+#RUN chmod 0744 /cafeina/ops/attack3/infinite_scan.sh
 
 EXPOSE 22
 EXPOSE 80
@@ -22,5 +22,5 @@ EXPOSE 3306
 #RUN chmod -v +x /run-services.sh
 
 #CMD["/run-services.sh"]
-CMD sh infinite_scan.sh
+#CMD sh infinite_scan.sh
 
