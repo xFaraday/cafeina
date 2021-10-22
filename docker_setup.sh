@@ -14,3 +14,12 @@ docker run -dit --name defense --network attack-net defense:Dockerfile bash
 docker run -dit --name attack --network attack-net attack:Dockerfile bash
 docker run -dit --name attack2 --network attack-net attack2:Dockerfile bash
 docker run -dit --name attack3 --network attack-net attack3:Dockerfile bash
+
+# wait for the fun to begin
+sleep 5
+
+# begin attack and record execution
+docker exec -d defense ./try_me.sh
+docker exec -d attack slowloris defense
+./ops/attack2/infinite_attack.sh
+./ops/attack3/infinite_scan.sh
